@@ -16,8 +16,11 @@
     <div  class="block">
     <p>空要素</p>
     <br>
-    <hr>
+    <img src="https://placehold.jp/150x150.png" alt="サンプル画像">
+    <img src="https://placehold.jp/150x150.png" alt="サンプル画像">
+    <img src="https://placehold.jp/150x150.png" alt="サンプル画像">
     <br>
+    <hr>
     </div>
 </div>
 </template>
