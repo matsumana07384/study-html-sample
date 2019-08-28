@@ -3,23 +3,23 @@
     <h1>HTML基礎講座vol.3 〜タグ基本編〜</h1>
     <div class="block">
         <p>divタグ</p>
-        <div class="mybox"></div>
+        <div class="mybox">div</div>
     </div>
     <div class="block">
         <p>articleタグ</p>
-        <article class="mybox"></article>
+        <article class="mybox">article</article>
     </div>
     <section class="block">
-        <h3>sectionタグ</h3>
-        <section class="mybox"></section>
+        <h3>タグ</h3>
+        <section class="mybox">section</section>
     </section>
     <div>
-        <p>navタグ</p>
+        <p>navタグとul、liタグ</p>
         <nav>
             <ul>
-                <li>トップページ</li>
-                <li>子ページ</li>
-                <li>子ページ</li>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
             </ul>
         </nav>        
     </div>
@@ -101,7 +101,6 @@ export default {
 .mybox{
     background-color: #F6D4D8;  /* 背景色 */
     border-radius: 5px;
-    padding: 20px;  /* 内側の余白 */
     position: relative;
     z-index: 0;
  }
