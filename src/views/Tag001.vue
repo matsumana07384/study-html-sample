@@ -22,7 +22,7 @@
         <a href="https://hogehoge.com">
             <div class="mybox"> 
                 <img src="https://placehold.jp/150x150.png" alt="サンプル画像">
-                <p>こういう画像だよ</p>
+                <p>画像の説明</p>
             </div>
         </a>
     </div>
