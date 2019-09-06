@@ -48,36 +48,41 @@
         </hgroup>
     </div>
 
-    <main>
-        
-    </main>
+    <div>
+    <h1>mainタグ</h1>
+        <main>
+        main contents
+            </main>
+    </div>
+
+    <div>
+        <p>pタグ</p>
+        <p>text</p>
+    </div>
+
+    <div>
+        <p>ul、ol、liタグ</p>
+        <ul>
+            <li>とくに</li>            
+            <li>いみは</li>            
+            <li>ない</li> 
+        </ul>
+        <ol>
+            <li>はじめに</li>            
+            <li>つぎに</li>            
+            <li>おわりに</li>            
+        </ol>
+    </div>
+
+    <div>
+        <dl>
+            <dt>用語</dt>
+            <dd>説明を長々と書いてもよい</dd>    
+        </dl>
+    </div>
 
 
-<!-- 
-
-main
-
-h1〜h6
-
-
-
-header
-
-footer
-
-p
-
-ul
-
-ol
-
-li
-
-dl
-
-dt
-
-dd
+<!--
 
 figure
 
@@ -115,7 +120,8 @@ textarea
 
 select
 
-radio -->
+radio 
+footer -->
 
 </div>
 </template>
