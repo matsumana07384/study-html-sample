@@ -13,7 +13,7 @@
     </div>
 
     <section class="block">
-        <h3>タグ</h3>
+        <h1>タグ</h1>
         <section class="mybox">section</section>
     </section>
 
@@ -107,22 +107,48 @@ tr
 th
 
 td
-
-iframe
-
-form
-
-input
-
-label
-
-textarea
-
-select
-
-radio 
-footer -->
-
+-->
+    <div>
+        <p>iframe</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.770164154662!2d139.69944175186086!3d35.658033880102536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b563b00109f%3A0x337328def1e2ab26!2z5riL6LC36aeF!5e0!3m2!1sja!2sjp!4v1568196084451!5m2!1sja!2sjp" width="300" height="200" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+    </div>
+    <div>
+        <p>form</p>
+    <form>
+        <div class="form-example">
+            <label for="name">Enter your name: </label>
+            <input type="text" name="loginid" id="loginid" required>
+        </div>          
+        <div>
+            <input type="submit" value="Login">
+        </div>
+    </form>
+    </div>
+    <div>
+        <p>input/radio</p>
+        <ul class="dot-none">
+            <li v-for="n in 5">
+                <input type="radio" v-bind:id="n" name="sample" v-bind:value="n">
+                {{n}}
+            </li>                
+        </ul>
+    </div>
+    <div>
+        <p>input/checkbox</p>
+        <ul class="dot-none">
+            <li v-for="n in 5">
+                <input type="checkbox" v-bind:id="n" name="sample" v-bind:value="n">
+                {{n}}
+            </li>                
+        </ul>
+    </div>
+    <div>
+        <p>label</p>
+        <div>
+            <label for="cheese">同意しますか？</label>
+            <input type="checkbox" name="cheese" id="cheese">
+        </div>
+    </div>
 </div>
 </template>
 
@@ -153,5 +179,8 @@ export default {
     padding-bottom: 10px; 
     padding-left: 10px;
     padding-right: 10px;
+}
+.dot-none {
+  list-style: none;
 }
 </style>
