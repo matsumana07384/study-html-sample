@@ -26,6 +26,11 @@ export default new Router({
       path: '/tag002',
       name: 'tag002',
       component: () => import(/* webpackChunkName: "about" */ './views/Tag002.vue')
+    },
+    {
+      path: '/input',
+      name: 'input',
+      component: () => import(/* webpackChunkName: "about" */ './views/Input.vue')
     }
   ]
 })
