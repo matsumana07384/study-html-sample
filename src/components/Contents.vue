@@ -18,7 +18,7 @@
     </ul>
     <ul>
       <li>
-        <router-link to="/tag002">タグ基本編</router-link>
+        <router-link to="/tag002">タグ基本編</router-link>/<router-link to="/input">Input要素</router-link>/
          | 
         <a href="#" target="_blank" rel="noopener">Qiita</a>
       </li>
