@@ -19,7 +19,9 @@ div
                 p color
                 label カラーパレッド：
                     input(type='color', value='#fffff')
-            p date
+            div
+                p date
+                input(type="date" value="2019-09-26" min="2019-09-01" max="2019-12-31")
             p datetime-local
             p email
             p file
@@ -76,7 +78,7 @@ div
             p 
                 b disabled：inputの操作を完全に無効化 
             form
-                input(type="range" disabled)
+                input(type="range" name="range" disabled)
         div
             p 
                 b maxlength：入力フィールドの大きさを指定
@@ -88,9 +90,33 @@ div
                 b max/min 入力できる最大値/最小値を指定
             p 人数（1人以上、10人以下）
             form
-                input(type="number" name="peple" min="1" max="10")
+                input(type="number" name="peple" min="1" max="10") 
+                | 人
 
-
+        div 
+            p
+                b readonly：入力欄が編集できないように指定
+            form
+                input(type="text" name="lastname" value="matsu" readonly="true")
+        div 
+            p
+                b required：入力欄に入力がないと送信ができないように指定
+            form
+                input(type="text" name="lastname" value="" required)
+                input(type="submit")
+        div 
+            p
+                b size:入力欄の幅の大きさを指定
+            form
+                input(type="password" name="password" size="10" required)
+                input(type="submit")
+        div 
+            p
+                b step:数の幅を指定
+            form
+                p 3個まとめ売
+                input(type="number" name="apple" min="0" max="100" step="3") 
+                | 個  
 </template>
 <script>
 export default {
