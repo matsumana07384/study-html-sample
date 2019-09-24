@@ -17,20 +17,65 @@ div
                     |砂糖
             div
                 p color
-                label カラーパレッド：
-                    input(type='color', value='#fffff')
+                form
+                    label カラーパレッド：
+                        input(type='color', value='#fffff')
+                    div
+                        input(type="submit" value="Send Request")
             div
                 p date
-                input(type="date" value="2019-09-26" min="2019-09-01" max="2019-12-31")
-            p datetime-local
-            p email
-            p file
-            p hidden
-            p number
-            p radio
-            p range
-            label
-                input.form-control(v-model='range', type='range', min='0', max='10')
+                form
+                    input(type="date" value="2019-09-26" min="2019-09-01" max="2019-12-31")
+                    div
+                        input(type="submit" value="Send Request")
+
+            div
+                p datetime-local
+                form
+                    input(type="datetime-local" name="birthdaytime")
+                    div
+                        input(type="submit" value="Send Request")
+            div
+                p email
+                form
+                    input(type="email" id="email" size="50" required)
+                    div
+                        input(type="submit" value="Send Request")
+            div
+                p file
+                form
+                    input(type="file" name="profile" accept="image/png, image/jpeg,image/gif")
+                    div
+                        input(type="submit" value="Send Request")
+            div
+                p hidden
+                form
+                    input(type="hidden" value="zt123456" id="resistNumber")
+                    div
+                        input(type="submit" value="Send Request")
+            div
+                p number
+                form
+                    label 予約する人数を選択：
+                    input(type="number" id="lot" name="" min="1" max="10" value="1")
+                    | 人
+                    div
+                        input(type="submit" value="Send Request")
+            div
+                p radio
+                form
+                    label
+                        input(type="radio" id="pancake" name="lunchMenu" checked)
+                        | パンケーキ
+                    label
+                        input(type="radio" id="omeletterice" name="lunchMenu")
+                        | オムライス
+                    label
+                        input(type="radio" id="hamburger" name="lunchMenu")
+                        | ハンバーグ
+            p range ★
+                label
+                    input(v-model='range', type='range', min='0', max='10')
             p reset
             p password
             input(type='password', maxlength='8', placeholder='パスワード入力')
