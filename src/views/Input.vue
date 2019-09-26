@@ -7,13 +7,13 @@ div
                 div
                     p checkbox
                     label 
-                        input(type='checkbox' id='material' name='material' value='小麦粉')
+                        input(type='checkbox' id='flower' name='material' value='小麦粉')
                         |小麦粉
                     label
-                        input(type='checkbox' id='material' name='material' value='ベーキングパウダー')
+                        input(type='checkbox' id='bakingpowder' name='material' value='ベーキングパウダー')
                         |ベーキングパウダー
                     label
-                        input(type='checkbox' id='material' name='material' value='砂糖')
+                        input(type='checkbox' id='sugar' name='material' value='砂糖')
                         |砂糖
                 input(type='submit' value='Send Request')
 
@@ -21,20 +21,23 @@ div
                 p color
                 form
                     label カラーパレッド：
-                        input(type='color' value='#fffff')
+                        input(type='color' value='#fffff' name='color' autocomplete="on" list="color-list")
+                        datalist(id='color-list')
+                            option(value='#000000')
+                            option(value='#ffffff')
                     div
                         input(type='submit' value='Send Request')
             div
                 p date
                 form
-                    input(type='date' value='2019-09-26' min='2019-09-01' max='2019-12-31')
+                    input(type='date' value='2019-09-26' name='set-time' min='2019-09-01' max='2019-12-31')
                     div
                         input(type='submit' value='Send Request')
 
             div
                 p datetime-local
                 form
-                    input(type='datetime-local' name='birthdaytime')
+                    input(type='datetime-local' id='birthdaytime' name='birthdaytime')
                     div
                         input(type='submit' value='Send Request')
             div
@@ -53,13 +56,15 @@ div
                 p hidden
                 form
                     input(type='hidden' value='zt123456' id='resistNumber')
+                    input(type='hidden' value='zt000000' id='resistNumber2' autocomplete="on")
                     div
                         input(type='submit' value='Send Request')
+
             div
                 p number
                 form
                     label 予約する人数を選択：
-                    input(type='number' id='lot' name='reservation' min='1' max='10' value='1')
+                    input(type='number' id='people' name='reservation' min='1' max='10' value='1')
                     | 人
                     div
                         input(type='submit' value='Send Request')
@@ -67,13 +72,13 @@ div
                 p radio
                 form
                     label
-                        input(type='radio' id='lunchMenu' name='lunchMenu' value='pancake' checked)
+                        input(type='radio' id='pancake' name='lunchMenu' value='pancake' checked)
                         | パンケーキ
                     label
-                        input(type='radio' id='lunchMenu' name='lunchMenu' value='omeletterice')
+                        input(type='radio' id='omeletterice' name='lunchMenu' value='omeletterice')
                         | オムライス
                     label
-                        input(type='radio' id='lunchMenu' name='lunchMenu' value='hamburger')
+                        input(type='radio' id='hamburger' name='lunchMenu' value='hamburger')
                         | ハンバーグ
             div
                 p range
@@ -154,13 +159,13 @@ div
             div
                 label 好きな食べ物：
                     label
-                        input(type='radio' id='lunchMenu' name='lunchMenu' value='pancake')
+                        input(type='radio' id='like-pancake' name='lunchMenu' value='pancake')
                         | パンケーキ
                     label
-                        input(type='radio' id='lunchMenu' name='lunchMenu' value='omeletterice')
+                        input(type='radio' id='like-omelette-rice' name='lunchMenu' value='omeletterice')
                         | オムライス
                     label
-                        input(type='radio' id='lunchMenu' name='lunchMenu' value='hamburger')
+                        input(type='radio' id='like-hamburg' name='lunchMenu' value='hamburger')
                         | ハンバーグ
             div
                 input(type='submit' value='送信！')

@@ -31,6 +31,12 @@ export default new Router({
       path: '/input',
       name: 'input',
       component: () => import(/* webpackChunkName: "about" */ './views/Input.vue')
+    },
+    {
+      path: '/css',
+      name: 'css',
+      component: () => import(/* webpackChunkName: "about" */ './views/Css.vue')
     }
+
   ]
 })
