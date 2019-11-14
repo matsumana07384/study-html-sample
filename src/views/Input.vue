@@ -110,6 +110,8 @@ div
             div
                 p serch
                 form
+                    input(type='search')
+                form
                     input(type='search' autocomplete='on' list='list')
                     datalist(id='list')
                         option(value='jQuery')
