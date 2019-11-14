@@ -6,6 +6,16 @@ div
             div(class='boxtypemodel')
                 p contents
     hr
+    div(class='size')
+        p(class='title') サイズ単位
+        div
+            p(class='sample-box unit-em')
+            p(class='sample-box unit-percent')
+            p(class='sample-box unit-px')
+            p(class='sample-box unit-pt')
+            p(class='sample-box unit-rem')
+            p(class='sample-box unit-vh')
+            p(class='sample-box unit-vw')
     section
         h2 サイズ指定
         div( v-for='(item,index) in sizeValue' v-bind:key='index')
@@ -96,6 +106,40 @@ export default {
 <style lang="scss" scoped>
 div{
     font-family: 'Kosugi Maru', sans-serif;
+}
+.title {
+    font-weight: bold;
+    color: #000;
+    font-size: 24px;
+}
+.size {
+    .unit-em {
+        width: 10em;
+        height: 10em;
+    }
+    .unit-percent {
+        width: 10%;
+        height: 10%;
+    }
+    .unit-px {
+        width: 10px;
+        height: 10px;
+    }
+    .unit-pt {
+        width: 10pt;
+        height: 10pt;
+    }
+    .unit-rem {
+        width: 10rem;
+        height: 10rem;
+    }
+    .unit-vh {
+        height: 10vh;
+
+    } 
+    .unit-vw {
+        width: 10vw;
+    }
 }
 section{
     margin: 100px auto;
