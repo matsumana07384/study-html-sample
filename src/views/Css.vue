@@ -20,9 +20,6 @@ div
         h2 サイズ指定
         div( v-for='(item,index) in sizeValue' v-bind:key='index')
             p(v-bind:class='item.styleClass') {{item.text}}
-    section
-        h2 
-
     hr
     section
         h2 グローバル属性値
