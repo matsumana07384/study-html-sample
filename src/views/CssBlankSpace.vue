@@ -1,10 +1,10 @@
 <template lang="pug">
 section
     h2 マージン・パディング
-    div(class='l-space')
+    div(class='section-block')
         div(class='l-margin')
-            p
-                b margin
+            div
+                p margin
             hr
             div(class='sample-box set-px')
                 p box

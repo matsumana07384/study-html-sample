@@ -2,24 +2,65 @@
 div
     section
         h1 Box Type model
+        p 要素を囲むボックスのこと
+        p content（文字や画像など）、padding、border、marginの層で構成される
         div
             div(class='boxtypemodel')
                 p contents
     hr
     div(class='size')
-        p(class='title') サイズ単位
+        p(class='title') 単位
         div
-            p(class='sample-box unit-em')
-            p(class='sample-box unit-percent')
-            p(class='sample-box unit-px')
-            p(class='sample-box unit-pt')
-            p(class='sample-box unit-rem')
-            p(class='sample-box unit-vh')
-            p(class='sample-box unit-vw')
+            div(class='sample-box')
+                div(class='unit')
+                    p em（えむ）
+                    p 文字の大きさを基準とする単位。語源は大文字の「M」。
+                    div(class='unit-em')
+                    small 
+                        p 10em × 10em
+                div(class='unit')
+                    p %（ぱーせんと）
+                    p 親要素の領域や初期値を基準とする単位。相対的に変化する。
+                    div(class='unit-percent') 
+                    small
+                        p 10% × 10% 
+                div(class='unit')
+                    p px（ぴくせる）
+                    p 画面上の1pxの長さを基準とする単位。相対的に変化する。
+                    div(class='unit-px')
+                    small  
+                        p  10px × 10px
+                div(class='unit')
+                    p pt（ポイント）
+                    p 1pt＝1/72in＝0.3528mmで値が固定されている単位。どの画面でも変わらない。
+                    div(class='unit-pt')
+                    small  
+                        p  10pt × 10pt
+                div(class='unit')
+                    p rem（れむ）
+                    p ルート（html)の要素のフォントサイズを基準とする単位。語源は「root em」。
+                    div(class='unit-rem')
+                    small
+                        p 10rem × 10rem
+                div(class='unit')
+                    p vh/vw
+                    p スクロールバーを含んだ状態でブラウザの表示領域を算出する単位。vhがviewport height 、vwがviewport width。
+                    div(class='unit-vh unit-vw')
+                    small
+                        p
+                            | 10vw × 10vh
+    hr
     section
-        h2 サイズ指定
-        div( v-for='(item,index) in sizeValue' v-bind:key='index')
-            p(v-bind:class='item.styleClass') {{item.text}}
+        h2 calc関数
+        p CSS上で数学演算を行うことができる関数。viewportや親要素に基づいて計算ができる。
+        p calc関数が使えるブラウザは多く、 Opera Miniを除くほんとんどのバージョンでサポートされている。
+        p 参考：
+            ul
+                li
+                    a(href='https://caniuse.com/#feat=calc') calcが使えるブラウザ
+                li
+                    a(href='https://coliss.com/articles/build-websites/operation/css/calc-function-with-use-cases.html') 
+                        |[CSS]知っていると便利な「calc()関数」の使い方のまとめ -レイアウト・要素の配置・フォントサイズの定義など
     hr
     section
         h2 グローバル属性値
@@ -40,14 +81,6 @@ div
 export default {
     data: function(){
         return{
-            sizeValue:[
-                { styleClass:'sample-box set-em',text:'5em' },
-                { styleClass:'sample-box set-percentage',text:'5%' },
-                { styleClass:'sample-box set-pt',text:'5pt' },
-                { styleClass:'sample-box set-px',text:'5px' },
-                { styleClass:'sample-box set-rem',text:'5rem' },
-                { styleClass:'sample-box set-viewport',text:'25v'}
-         ]
         }   
     }
 }
@@ -61,14 +94,21 @@ div{
     color: #000;
     font-size: 24px;
 }
+.sample-box .unit div{
+    background: #f0f7ff;
+    border: dashed 0.1em #5b8bd0;
+    margin: 0 auto 0 auto;
+}
 .size {
+    margin: 0 auto 0 auto;
+
     .unit-em {
         width: 10em;
         height: 10em;
     }
     .unit-percent {
         width: 10%;
-        height: 10%;
+        height: 100%;
     }
     .unit-px {
         width: 10px;
@@ -96,6 +136,7 @@ section{
 p {
     color: gray;
 }
+
 .l-global{
 p {
     color: #4169e1;
@@ -121,14 +162,8 @@ p.p-unset {
     border: 30px solid #fffbce;
     margin: 30px auto;
 }
-.sample-box{
-    background: #f0f7ff;
-    border: dashed 0.1em #5b8bd0;
-    p {
-        margin: 0; 
-        padding: 0;
-    }  
-}
+
+
 .set-em {
     padding: 5em;    
 }
