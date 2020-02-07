@@ -13,6 +13,7 @@ import CssBackGround from './views/CssBackGround.vue'
 import CssWidthHeight from './views/CssWidthHeight.vue'
 import CssText from './views/CssText.vue'
 import CssPseudoElement from './views/CssPseudoElement.vue'
+import Sample from './views/LayoutSnippets.vue'
 
 Vue.use(Router)
 
@@ -75,6 +76,10 @@ export default new Router({
     {
       path: '/cssPseudoElement',
       component: CssPseudoElement
+    },
+    {
+      path: '/sample',
+      component: Sample
     }
 
   ]
