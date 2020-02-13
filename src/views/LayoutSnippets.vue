@@ -8,7 +8,7 @@ div(class="item-wrapper")
         LpSection
     p(class="item-text") イメージをスクロールできるようにする
     div
-        ScroonImage      
+        ScrollImage      
 </div>
 </template>
 
@@ -17,13 +17,13 @@ div(class="item-wrapper")
 <script>
 import ImageOnText from '@/components/organisms/ImageOnText.vue'
 import LpSection from '@/components/organisms/LpSection.vue'
-import ScroonImage from '@/components/organisms/ScroonImage.vue'
+import ScrollImage from '@/components/organisms/ScrollImage.vue'
 
 export default {
   components: {
     ImageOnText,
     LpSection,
-    ScroonImage
+    ScrollImage
   }    
 }
 </script>

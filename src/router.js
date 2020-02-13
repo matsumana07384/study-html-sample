@@ -13,7 +13,7 @@ import CssBackGround from './views/CssBackGround.vue'
 import CssWidthHeight from './views/CssWidthHeight.vue'
 import CssText from './views/CssText.vue'
 import CssPseudoElement from './views/CssPseudoElement.vue'
-import Sample from './views/LayoutSnippets.vue'
+import LayoutSnippets from './views/LayoutSnippets.vue'
 
 Vue.use(Router)
 
@@ -78,8 +78,8 @@ export default new Router({
       component: CssPseudoElement
     },
     {
-      path: '/sample',
-      component: Sample
+      path: '/layoutsnippets',
+      component: LayoutSnippets
     }
 
   ]
