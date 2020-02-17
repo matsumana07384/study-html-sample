@@ -31,7 +31,7 @@ div
                     small  
                         p  10px × 10px
                 div(class='unit')
-                    p pt（ポイント）
+                    p pt（ぽいんと）
                     p 1pt＝1/72in＝0.3528mmで値が固定されている単位。どの画面でも変わらない。
                     div(class='unit-pt')
                     small  
@@ -44,7 +44,10 @@ div
                         p 10rem × 10rem
                 div(class='unit')
                     p vh/vw
-                    p スクロールバーを含んだ状態でブラウザの表示領域を算出する単位。vhがviewport height 、vwがviewport width。
+                    p
+                        |スクロールバーを含んだ状態でブラウザの表示領域を算出する単位。
+                        br
+                        | vhがviewport height 、vwがviewport width。
                     div(class='unit-vh unit-vw')
                     small
                         p
@@ -52,12 +55,16 @@ div
     hr
     section
         h2 calc関数
-        p CSS上で数学演算を行うことができる関数。viewportや親要素に基づいて計算ができる。
-        p calc関数が使えるブラウザは多く、 Opera Miniを除くほんとんどのバージョンでサポートされている。
+        p 
+            | CSS上で数学演算を行うことができる関数。
+            br
+            | viewportや親要素に基づいて計算ができる。
+        p calc関数が使えるブラウザは多く、 Opera Miniを除く最新版ではサポートされている。
         p 参考：
             ul
                 li
-                    a(href='https://caniuse.com/#feat=calc') calcが使えるブラウザ
+                    a(href='https://caniuse.com/#feat=calc')
+                        | Can I use... Support tables for HTML5, CSS3, etc
                 li
                     a(href='https://coliss.com/articles/build-websites/operation/css/calc-function-with-use-cases.html') 
                         |[CSS]知っていると便利な「calc()関数」の使い方のまとめ -レイアウト・要素の配置・フォントサイズの定義など
