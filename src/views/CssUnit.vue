@@ -64,13 +64,15 @@ div
             ul
                 li
                     a(href='https://caniuse.com/#feat=calc')
-                        | Can I use... Support tables for HTML5, CSS3, etc
+                        |  Can I use... Support tables for HTML5, CSS3, etc
                 li
                     a(href='https://coliss.com/articles/build-websites/operation/css/calc-function-with-use-cases.html') 
-                        |[CSS]知っていると便利な「calc()関数」の使い方のまとめ -レイアウト・要素の配置・フォントサイズの定義など
+                        | [CSS]知っていると便利な「calc()関数」の使い方のまとめ -レイアウト・要素の配置・フォントサイズの定義など
     hr
     section
         h2 グローバル属性値
+            div
+                p 
         div(class='l-global')
             p 設定した色
             p(class='p-initial') initial
