@@ -8,7 +8,9 @@ div(class="item-wrapper")
         LpSection
     p(class="item-text") イメージをスクロールできるようにする
     div
-        ScrollImage      
+        ScrollImage
+    div(class="item-text") flexboxのサンプル
+        Flexbox
 </div>
 </template>
 
@@ -18,12 +20,14 @@ div(class="item-wrapper")
 import ImageOnText from '@/components/organisms/ImageOnText.vue'
 import LpSection from '@/components/organisms/LpSection.vue'
 import ScrollImage from '@/components/organisms/ScrollImage.vue'
+import Flexbox from '@/components/organisms/Flexbox.vue'
 
 export default {
   components: {
     ImageOnText,
     LpSection,
-    ScrollImage
+    ScrollImage,
+    Flexbox
   }    
 }
 </script>
