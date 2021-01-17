@@ -29,7 +29,10 @@ div(class='hello')
       router-link(to='/css') {{ css.ver1.title }} 
       span  |
       a(href='#', target='_blank', rel='noopener') {{ urlTitle }}
-    
+  h2 Other
+  ul
+    li 
+      router-link(to='/layoutsnippets') {{ other.ver1.title }} 
 </template>
 
 <script>
@@ -63,6 +66,11 @@ export default {
           ver1: {
             title:'CSSの基本知識',
             url: ''
+          }
+        },
+        other :{
+          ver1: {
+            title:'スニペット',
           }
         },
       urlTitle: 'Qiita'
